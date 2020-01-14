@@ -1,8 +1,10 @@
 const Computer = (text, print) => {
     const compute = () => {
-        switch(text){
+        switch(text.toLowerCase()){
+            case "hello":
+                return "Hello human"
             default:
-                return `'${text}' is not recognized as an internal or external command, operable program or batch file.`
+                return `'${text}' is not recognized as an internal or external command, operable program or batch file.`;
         }
     }
 
