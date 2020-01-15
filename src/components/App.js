@@ -4,9 +4,9 @@ import TerminalLines from './TerminalLines';
 import TerminalInput from './TerminalInput';
 
 const App = () => {
-    const [Lines, setLines] = useState([{text: "Welcome to the console!", by: 0}])
+    const [Lines, setLines] = useState([{ text: "Welcome to the console!", by: 0 }])
 
-    return <><TerminalLines lines={Lines}/><TerminalInput setLines={setLines}/></>
+    return <><TerminalLines lines={Lines} /><TerminalInput setLines={setLines} /></>
 }
 
 export default App;

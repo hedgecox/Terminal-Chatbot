@@ -1,6 +1,11 @@
 body, input{
-    background-color: #000;
-    color: #fff;
+    background-color: #0C0C0C;
+    color: #F3F3F3;
     font: 1.3rem Inconsolata, monospace;
+    line-height: 1.8rem;
 }
 
+p{
+    white-space: pre;
+    margin: 0;
+}
