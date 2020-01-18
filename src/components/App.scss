@@ -1,8 +1,13 @@
+:root{
+    --terminal_bg: #0C0C0C;
+    --terminal_fg: #f3f3f3;
+}
+
 body, input{
-    background-color: #0C0C0C;
-    color: #F3F3F3;
-    font: 1.3rem Inconsolata, monospace;
-    line-height: 1.8rem;
+    background-color: var(--terminal_bg);
+    color: var(--terminal_fg);
+    font: 1.2rem Inconsolata, monospace;
+    line-height: 1.3rem;
 }
 
 p{
