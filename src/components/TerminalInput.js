@@ -7,9 +7,13 @@ const TerminalInput = (props) => {
 
     useEffect(() => {
         const ButtonClick = () => tInput.current.focus();
+        ButtonClick();
 
-        tInput.current.focus();
-        window.addEventListener('click', ButtonClick)
+        window.addEventListener('click', ButtonClick);
+
+        return () => {
+            window.removeEventListener('click', ButtonClick);
+        }
     }, [])
 
 

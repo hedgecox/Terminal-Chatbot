@@ -3,7 +3,7 @@ const helpColor = `Sets the default console foreground and background colors.
 
 COLOR [attr]
 
-  attr        Specifies color attribute of console output
+  attr          Specifies color attribute of console output   
 
 Color attributes are specified by TWO hex digits -- the first
 corresponds to the background; the second the foreground.  Each digit
@@ -21,7 +21,9 @@ can be any of the following values:
 
 const Computer = (text, print) => {
     const compute = () => {
-        const words = text.toLowerCase().indexOf(' ') > 0 ? text.split(' ') : [text];
+        const lowerText = text.toLowerCase();
+        const words = lowerText.indexOf(' ') > 0 ? lowerText.split(' ') : [lowerText];
+        //console.log(words[0])
         switch (words[0]) {
             case "help":
                 switch (words[1]) {
@@ -29,7 +31,8 @@ const Computer = (text, print) => {
                         return helpColor
                     default:
                         return `For more information on a specific command, type HELP command-name
-color           Sets the default console foreground and background colors.`
+color           Sets the default console foreground and background colors.
+cls             Clear the screen`
                 }
 
             case "color":
@@ -51,7 +54,7 @@ color           Sets the default console foreground and background colors.`
 
     const response = compute();
     if (response) {
-        print(lines => [...lines, { text: compute(), by: 0 }]);
+        print(lines => [...lines, { text: response, by: 0 }]);
     }
 }
 
