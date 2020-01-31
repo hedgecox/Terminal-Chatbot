@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
-import './App.scss';
-import TerminalLines from './TerminalLines';
-import TerminalInput from './TerminalInput';
+import React, { useState } from "react";
+import "./App.scss";
+import TerminalLines from "./TerminalLines";
+import TerminalInput from "./TerminalInput";
+import Chat from "./Chat";
 
 const App = () => {
-    const [Lines, setLines] = useState([{ text: "Welcome to the console!", by: 0 }])
+	//API: AIzaSyAqnLOKmOBCrzpLNqacRqKxZFwzCqmEktU
 
-    return <><TerminalLines lines={Lines} /><TerminalInput setLines={setLines} /></>
-}
+	const [Lines, setLines] = useState([{ text: "Welcome to the console!", by: 0 }]);
+
+	return (
+		<>
+			<Chat />
+			<TerminalLines lines={Lines} />
+			<TerminalInput setLines={setLines} />
+		</>
+	);
+};
 
 export default App;
